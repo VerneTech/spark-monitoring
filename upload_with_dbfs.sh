@@ -1,6 +1,10 @@
+#!/bin/bash
+
 if [[ $# -ne 2 ]] ; then
     echo 'Required 2 arguments: databricks_profile_name and version_of_library.'
-    echo ' For example: ./upload_with_dbfs.sh ecbpremium 3.1.2_2.12-1.0.0 '
+    echo '   For example: ./upload_with_dbfs.sh ecbpremium 3.1.2_2.12-1.0.0 '
+    echo '                This requires to have configured ~/.databrickscfg'
+    echo ' For more info check: https://docs.databricks.com/dev-tools/cli/index.html'
     exit 1
 fi
 echo 'Uploading to dbfs:/databricks/spark-monitoring/'
